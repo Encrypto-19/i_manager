@@ -1,0 +1,16 @@
+{% extends 'i_blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Logout
+{% endblock %}
+{% block navbar %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container mt-100">
+<div class="center"><h3>You have been logged out...</h3></div>
+<div class="center"><a href="{% url 'user_login' %}">Log in</a>  or <a href="{% url 'i_blog_home' %}">Go Home</a></div>
+</div>
+{% endblock %}

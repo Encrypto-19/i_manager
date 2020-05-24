@@ -1,0 +1,60 @@
+{% extends 'i_blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Register
+{% endblock %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+
+<div class="container center mt-100 p-100 hover_shadow">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="text">First Name</label>
+                {{form.first_name}}
+            </div>
+            <div class="input-field col s6">
+                <label for="text">Last Name</label>
+                {{form.last_name}}
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="input-field col s12">
+                <label for="username">Username</label>
+                {{form.username}}
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="input-field col s12">
+                <label for="email">Email</label>
+                {{form.email}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="password1">Password</label>
+                {{form.password1}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="password2">Password Confirmation</label>
+                {{form.password2}}
+            </div>
+        </div>
+
+        <button class="btn teal white-text waves-effect" type="submit">Sign Up</button>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

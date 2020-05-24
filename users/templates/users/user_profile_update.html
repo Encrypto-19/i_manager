@@ -1,0 +1,65 @@
+{% extends 'i_blog/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}
+Update Profile
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container center mt-30 p-100 hover_shadow">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <label for="text">First Name</label>
+                {{u_form.first_name}}
+            </div>
+            <div class="input-field col s12 m6">
+                <label for="text">Last Name</label>
+                {{u_form.last_name}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <label for="text">Username</label>
+                {{u_form.username}}
+            </div>
+            <div class="input-field col s12 m6">
+                <label for="text">Email</label>
+                {{u_form.email}}
+            </div>
+        </div>
+
+        {{p_form|crispy}}
+
+
+        <button class="btn teal white-text waves-effect waves-light" type="submit">Submit Changes</button>
+    </form>
+</div>
+
+
+
+
+{% endblock %}
+
+
+<!-- <div class="container pt-5 d-flex justify-content-center">
+    <div class="form_container" style="width: 40rem;">
+        <form action="" method="POST" class="justify-content-center d-flex flex-column " enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group legend_form ">
+                <legend class="border-bottom mb-4 text-center">Change Profile Info</legend>
+            </fieldset>
+            {{u_form|crispy}}
+            {{p_form|crispy}}
+            <img src="{{user.profile.image.url}}" alt="image here" style="width: 100px;height: 100px;">
+            <button class="btn btn-outline-info" type="submit">Save Changes</button>
+        </form>
+    </div>
+</div> -->

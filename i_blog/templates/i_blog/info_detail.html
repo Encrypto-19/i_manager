@@ -1,0 +1,57 @@
+{% extends 'i_blog/base.html' %}
+
+{% block title %}
+Company Info
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text center">
+            <span class="card-title"><h1>Company Name: {{object.name}}</h1></span>
+            <p>
+                <h3 class="flow-text">Tagline: {{object.tagline}}</h3>
+            <p>
+                <h3 class="flow-text">Perks provided: {{object.perks}}</h3>
+            </p>
+            <p>
+                <h3 class="flow-text">Skills Required: {{object.skills}}</h3>
+            </p>
+            <p>
+                <h3 class="flow-text">Date Applied: {{object.date_applied}}</h3>
+            </p>
+            <a href="#!" class="btn btn-waves waves-effect mt-5 center">{{ object.status }}</a>
+        </div>
+        <div class="card-action center">
+            <a href="{{object.link}} " target="_blank" class="mb-10">Application Link</a>
+            <a href="{{object.website}}" target="_blank" class="mb-10">Website Link</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+<!-- <div class="container d-flex justify-content-center">
+    <div class="card text-center" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{object.name}}</h5>
+            <p class="card-text">Tagline: {{object.tagline}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Perks: {{object.perks}}</li>
+            <li class="list-group-item">Skills required: {{object.skills}}</li>
+            <li class="list-group-item">Status: {{object.status}}</li>
+            <li class="list-group-item">Date applied: {{object.date_applied}}</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Application link: {{object.link}}</a>
+            <br>
+            <a href="#" class="card-link">Website link: {{object.website}}</a>
+        </div>
+    <div class="btn btn-outline-info">Edit Application</div>
+    </div>
+</div> -->

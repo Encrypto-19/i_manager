@@ -1,0 +1,53 @@
+{% extends 'i_blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+My Profile
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text center">
+      <img src="{{object.profile.image.url}}" alt="" class="circle profile_image z-depth-3">
+
+      <span class="card-title">{{object.username}}</span>
+      <ul class="collapsible" data-collapsible='accordion'>
+        <li>
+          <div class="collapsible-header teal white-text">
+            <i class="material-icons">face</i>Personal Info
+          </div>
+          <div class="collapsible-body teal white-text">
+            <span>Name: {{object.first_name}} {{object.last_name}} <br>
+              Email: {{object.email}}
+            </span>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header teal white-text">
+            <i class="material-icons">texture</i>Default Resume
+          </div>
+          <div class="collapsible-body teal white-text">
+            {% if object.profile.default_resume.url != '' %}
+            <span><a href="{{object.profile.default_resume.url}}" target="_blank" class="white-text">Click here to see your Resume!</a></span>
+            {% else %}
+            <span>Resume Not Submitted</span>
+            {% endif %}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="card-action center">
+      <a href="{% url 'user_profile_update' %}" class="btn-floating red btn-large waves-effect waves-light"><i class="large material-icons">edit</i></a>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+

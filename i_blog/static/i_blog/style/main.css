@@ -1,0 +1,71 @@
+/* CSS for navbar */
+
+.p-100{
+    padding: 100px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+
+
+.side_bar_img{
+    width: 100px;
+    height: 100px;
+    border: solid teal;
+    border-width: 1px;
+}
+
+
+/* CSs for userinfo page */
+
+.userinfo_icons{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    margin-top: -35px;
+}
+
+.mb-10{
+    margin-bottom: 20px;
+}
+
+
+/* css for forms */
+
+.hover_shadow{
+    border: solid lightslategray;
+    border-width: 1px;
+    border-radius: 10px;
+    transition-property: box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.hover_shadow:hover{
+    box-shadow: 0px 0px 50px -5px teal;
+}
+
+
+/* css for profile page */
+
+.profile_image{ 
+    max-width: 300px;
+}
+
+.profile_name{
+    align-self: center;
+}

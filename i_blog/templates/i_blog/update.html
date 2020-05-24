@@ -1,0 +1,23 @@
+{% extends 'i_blog/base.html' %}
+
+{% block title %}
+Update
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container center mt-100 p-100 hover_shadow">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{form}}
+
+
+
+<button class="btn waves-effect waves-light teal" type="submit">Save changes</button>
+</form>
+</div>
+
+
+{% endblock %}
