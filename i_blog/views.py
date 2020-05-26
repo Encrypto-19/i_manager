@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from .models import Company, Extra
 from .forms import InfoCreateForm, InfoUpdateForm
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 # Create your views here.
 
@@ -13,7 +14,7 @@ class InfoListView(TemplateView):
     template_name = 'i_blog/home.html'
 
 
-class InfoCreateView(CreateView):
+class InfoCreateView(LoginRequiredMixin, CreateView):
     model = Company
     form_class = InfoCreateForm
 
@@ -25,9 +26,15 @@ class InfoCreateView(CreateView):
 
 
 
-class InfoUpdateView(UpdateView):
+class InfoUpdateView(LoginRequiredMixin, UserPassesTestMixin , UpdateView):
     model = Company
     form_class = InfoUpdateForm
+
+    def test_func(self):
+        info = self.get_object()
+        if self.request.user == info.user:
+            return True
+        return False
 
 
 class UserInfoListView(ListView):
@@ -45,7 +52,13 @@ class UserInfoListView(ListView):
 
 
 
-class InfoDetailView(DetailView):
+class InfoDetailView(LoginRequiredMixin, UserPassesTestMixin ,DetailView):
     model = Company
+
+    def test_func(self):
+        info = self.get_object()
+        if self.request.user == info.user:
+            return True
+        return False
     
 

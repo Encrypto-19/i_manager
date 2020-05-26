@@ -13,6 +13,8 @@ Login
     <form method="POST" action="">
         {% csrf_token %}
 
+        {{form.errors}}
+
 
         <div class="row ">
             <div class="input-field col s12">

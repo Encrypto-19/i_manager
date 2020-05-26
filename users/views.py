@@ -27,8 +27,14 @@ class RegisterView(View):
 
 
 
-class ProfileView(LoginRequiredMixin, DetailView):
+class ProfileView(LoginRequiredMixin,UserPassesTestMixin , DetailView):
     model = User
+
+    def test_func(self):
+        user = self.get_object()
+        if user == self.request.user:
+            return True
+        return False
 
 
 
