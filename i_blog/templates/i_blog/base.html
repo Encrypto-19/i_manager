@@ -18,8 +18,9 @@
   {% block navbar %}
   <nav>
     <div class="nav-wrapper teal">
-      <a href="{% url 'i_blog_home' %}" class="brand-logo ml-20 flow-text"><i class="large material-icons">insert_chart</i>Job
-        Manager</a>
+      <a href="{% url 'i_blog_home' %}" class="brand-logo"><i class="material-icons">insert_chart</i>
+        Job Manager
+      </a>
       <a href="#" class="sidenav-trigger" data-target="mobile-demo"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         {% if user.is_authenticated %}
@@ -73,6 +74,7 @@
       $('.sidenav').sidenav();
 
     });
+
 
     document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('.fixed-action-btn');

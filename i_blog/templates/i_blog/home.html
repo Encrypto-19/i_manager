@@ -1,5 +1,5 @@
 {% extends 'i_blog/base.html' %}
-
+{% load static %}
 {% block title %}
 Home
 {% endblock %}
@@ -8,42 +8,66 @@ Home
 
 
 {% block content %}
-
-
+<section class="section1">
+  <div class="wrapper ">
+    <div class="box1 box">
+      <p >Are You</p>
+    </div>
+    <div class="box2 box">
+      <p class="vertical_text">
+        Struggling to
+      </p>
+    </div>
+    <div class="box3 box">
+      <p class="vertical_text">
+        Keep Your
+      </p>
+    </div>
+    <div class="box4 box">
+      <p>Job Applications</p>
+    </div>
+    <div class="box5 box">
+      <p>Organized ?</p>
+    </div>
+  </div>
+</section> 
 
 
 <div class="parallax-container">
-    <!-- <div class="parallax"><img src="https://picsum.photos/1920/1080"></div> -->
-  </div>
-  <div class="section white">
-    <div class="row container">
-      <h2 class="header">Parallax</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-    </div>
-  </div>
-  <div class="parallax-container">
-    <!-- <div class="parallax"><img src="https://picsum.photos/1920/1080"></div> -->
-  </div>
-  <div class="section white">
-    <div class="row container">
-      <h2 class="header">Parallax</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-    </div>
-  </div>
+  <div class="parallax"><img src="{% static 'i_blog/images/home3.jpg' %}"></div>
   
+</div>
 
-  <div class="parallax-container">
-    <!-- <div class="parallax"><img src="https://picsum.photos/1920/1080"></div> -->
+
+
+ <section class="section2">
+  <div class="float_cell overlap_left large">
+    What does this website do?
   </div>
-  <div class="section white">
-    <div class="row container">
-      <h2 class="header">Parallax</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  <div class="float_cell small">
+    It helps you to keep track of all the jobs that you apply for.
+  </div>
+</section>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="{% static 'i_blog/images/home2.jpg' %}"></div>
+</div>
+
+<section class="section3">
+  <h1 class="white-text center underline">Features</h1>
+  <div class="wrapper2 center">
+    <div class="feature1 feature z-depth-5">
+      Keep Track of All Your Applications Anywhere, Anytime.
+    </div>
+    <div class="feature2 feature z-depth-5">
+      Edit Your Applications on the Fly
+    </div>
+    <div class="feature3 feature z-depth-5">
+      Save Different Resume for Different Applications.
     </div>
   </div>
-  <div class="parallax-container">
-    <!-- <div class="parallax"><img src="https://picsum.photos/1920/1080"></div> -->
-  </div>
+</section>
+
 
 
 

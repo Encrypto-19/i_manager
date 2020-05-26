@@ -5,7 +5,7 @@ from django.views.generic import ListView, CreateView, DetailView, TemplateView,
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from .models import Company, Extra
-from .forms import InfoCreateForm
+from .forms import InfoCreateForm, InfoUpdateForm
 
 # Create your views here.
 
@@ -27,8 +27,7 @@ class InfoCreateView(CreateView):
 
 class InfoUpdateView(UpdateView):
     model = Company
-    fields = ['name', 'status', 'link', 'website', 'tagline', 'perks', 'skills', 'status']
-    
+    form_class = InfoUpdateForm
 
 
 class UserInfoListView(ListView):

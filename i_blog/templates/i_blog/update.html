@@ -11,7 +11,61 @@ Update
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
 
-        {{form}}
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="text">Company Name</label>
+                {{form.name}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                {{form.tagline}}
+              <label for="textarea1">Tagline</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                {{form.perks}}
+              <label for="textarea2">Perks</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                {{form.skills}}
+              <label for="textarea3">Skills Required</label>
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <div class="input-field col s12">
+                <label for="name">Application Link</label>
+                {{form.link}}
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="input-field col s12">
+                <label for="name">Website Link</label>
+                {{form.website}}
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="input-field col s12">
+                <label for="name">Status</label>
+                {{form.status}}
+            </div>
+        </div>
+
+        {{form.resume}}
+
+        <br>
+        <br>
+        
 
 
 
