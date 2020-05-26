@@ -18,9 +18,7 @@
   {% block navbar %}
   <nav>
     <div class="nav-wrapper teal">
-      <a href="{% url 'i_blog_home' %}" class="brand-logo"><i class="material-icons">insert_chart</i>
-        Job Manager
-      </a>
+      <a href="{% url 'i_blog_home' %}" class="brand-logo" style="font-size: 1.9rem;">Job Manager</a>
       <a href="#" class="sidenav-trigger" data-target="mobile-demo"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         {% if user.is_authenticated %}
