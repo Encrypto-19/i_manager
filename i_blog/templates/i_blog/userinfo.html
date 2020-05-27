@@ -5,15 +5,13 @@ My Applications
 {% endblock %}
 
 {% block content %}
+<div class="bottom_right">
+    <a class="btn-floating btn-large waves-effect waves-light red pulse" href="{% url 'i_blog_create' %}">
+        <i class="material-icons">add</i>
+    </a>
+</div>
 
 <div class="container">
-
-    <div class="bottom_right">
-        <a class="btn-floating btn-large waves-effect waves-light red pulse" href="{% url 'i_blog_create' %}">
-            <i class="material-icons">add</i>
-        </a>
-    </div>
-
 
     {% if objects|length == 0 %}
     <h3 class="center flow-text">You have not applied anywhere. Yet!!!!!!!!</h3>
@@ -32,8 +30,8 @@ My Applications
             </p>
         </div>
         <div class="card-action">
-            <a href="{{object.link}} " target="_blank" class="mb-10">Application Link</a>
-            <a href="{{object.website}}" target="_blank" class="mb-10">Website Link</a>
+            <a href="{{object.link}} " target="_blank" class="mb-10 ">Application Link</a>
+            <a href="{{object.website}}" target="_blank" class="mb-10 ">Website Link</a>
         </div>
     </div>
     <div class="userinfo_icons">
@@ -41,10 +39,10 @@ My Applications
             href="{% url 'i_blog_update' object.id %}">
             <i class="large material-icons">mode_edit</i>
         </a> -->
-        <a class="btn-floating  waves-effect waves-light red pulse" href="{% url 'i_blog_update' object.id %}">
+        <a class="btn-floating  waves-effect waves-light red " href="{% url 'i_blog_update' object.id %}">
             <i class="material-icons">mode_edit</i>
         </a>
-        <a class="btn-floating  waves-effect waves-light red pulse ml-20" href="{% url 'i_blog_infodetail' object.id %}">
+        <a class="btn-floating  waves-effect waves-light red " href="{% url 'i_blog_infodetail' object.id %}">
             <i class="material-icons">visibility</i>
         </a>
 

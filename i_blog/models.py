@@ -21,7 +21,7 @@ class Company(models.Model):
         return self.name + ' for user: ' +  self.user.username
 
     def get_absolute_url(self):
-        return reverse('i_blog_home')
+        return reverse('i_blog_userinfo')
 
 
 class Extra(models.Model):
