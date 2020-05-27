@@ -1,6 +1,10 @@
 /* CSS for navbar */
 
 
+.mb-60{
+    margin-bottom: 60px;
+}
+
 .p-100 {
     padding: 100px;
 }
@@ -21,6 +25,9 @@
     margin-top: 30px;
 }
 
+.mr-50px{
+    margin-right: 50px;
+}
 
 
 .side_bar_img {
@@ -50,6 +57,7 @@
     right: 0;
     margin-right: 5px;
     margin-bottom: 5px;
+    z-index: 5;
 }
 
 

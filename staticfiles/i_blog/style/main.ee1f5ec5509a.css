@@ -1,5 +1,10 @@
 /* CSS for navbar */
 
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
 .p-100 {
     padding: 100px;
 }
@@ -20,6 +25,9 @@
     margin-top: 30px;
 }
 
+.mr-50px{
+    margin-right: 50px;
+}
 
 
 .side_bar_img {
@@ -44,12 +52,15 @@
 }
 
 .bottom_right{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    z-index: 5;
 }
+
+
 
 
 /* css for forms */

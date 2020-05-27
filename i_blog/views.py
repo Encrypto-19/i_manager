@@ -41,6 +41,7 @@ class UserInfoListView(ListView):
     model = Company
     context_object_name = 'objects'
     paginate_by = 3
+    ordering = ['-date_applied']
     # queryset = Company.objects.filter(user.username == 'encrypto')
 
     def get_queryset(self):
